@@ -1,0 +1,81 @@
+---------------------------------------------------------------------------------------------
+--	 spi_slave module
+	
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+
+entity spi_slave is	
+  GENERIC(
+--    slaves  : INTEGER := 4;  --number of spi slaves
+    d_width : INTEGER := 32); --timer bus width
+	port(
+
+		
+	ref_clk				: in std_logic; -- 100MHz ref CLK from external oscillator
+	cpu_active			: in std_logic; 
+	reset_n				: in std_logic; 
+	dog_en				: in std_logic; 
+	timer_exp_data		: in std_logic_vector(d_width-1 downto 0);
+	
+	dog_n					: out std_logic	; -- active low, drives '0' when timer expires
+--	this is not a latched signal.. so detect the reset request from the falling edge of dog_n
+
+---- debug signals----------	
+	timer				: buffer std_logic_vector(d_width-1 downto 0) 
+
+
+);
+end entity spi_slave;
+
+architecture spi_slave of spi_slave is 
+
+--	signal	timer				: std_logic_vector(d_width-1 downto 0) := (others => '0') ;
+	
+	signal	timer_zero				: std_logic ;
+--	signal	timer_zero				: std_logic ;
+	signal	t_clr_n				: std_logic ;
+	
+
+	
+	
+	
+begin
+
+	timer <= 
+					(others => '0') 		when (t_clr_n and reset_n) = '0' else
+					timer+'1'			 	when (rising_edge(ref_clk) and dog_en = '1') else 
+					unaffected;
+
+--	t_clr_n <= 
+--					'1' 				when timer_zero = '1' else
+--					'0'			 	when (rising_edge(cpu_active)) else 
+--					unaffected;
+--	
+	process( cpu_active,timer_zero)
+		begin
+				if(timer_zero = '1') then
+					t_clr_n		<=		'1';
+				elsif(rising_edge(cpu_active)) then
+					t_clr_n		<=		'0';
+				end if;
+		end process;
+	
+--	t_clr_n <= '1' when timer < "01111111" else '0' ;
+	timer_zero <= '1' when timer = x"00" else '0' ;
+	dog_n <= '0' when timer = timer_exp_data else '1' ;
+	
+	
+	
+	
+	--- debug----
+	
+--	deb_timer <= timer;
+	
+end architecture spi_slave;	
+
+
+
+

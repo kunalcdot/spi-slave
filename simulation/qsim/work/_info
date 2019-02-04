@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/RHP_backup/RHP/SSR/git/spi_slave/simulation/qsim
+vspi_slave
+Z1 !s110 1549293053
+!i10b 1
+!s100 3bDF8mbZKglXm_Fk9LI4i3
+IFBMIRg?^JimTF71WVg9V33
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1549293052
+8spi_slave.vo
+Fspi_slave.vo
+L0 32
+Z3 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1549293053.665000
+!s107 spi_slave.vo|
+!s90 -work|work|spi_slave.vo|
+!i113 1
+Z4 o-work work
+vspi_slave_vlg_check_tst
+R1
+!i10b 1
+!s100 ZS<2VB0l5Ydf`A90UdeIQ2
+IEc=IYM@jlQ==YBdNGf9bC2
+R2
+R0
+Z5 w1549293050
+Z6 8Waveform.vwf.vt
+Z7 FWaveform.vwf.vt
+L0 68
+R3
+r1
+!s85 0
+31
+Z8 !s108 1549293053.750000
+Z9 !s107 Waveform.vwf.vt|
+Z10 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+vspi_slave_vlg_sample_tst
+R1
+!i10b 1
+!s100 z<MklAKa:L4l9P3_;0=zB3
+IRnf2CVjJ=AG@Gl60U;f>n2
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+vspi_slave_vlg_vec_tst
+R1
+!i10b 1
+!s100 GdHL:EJZDNMKNHheTzScj3
+IkLnQ65Ja0mzV6eMc;DMzO3
+R2
+R0
+R5
+R6
+R7
+L0 342
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
