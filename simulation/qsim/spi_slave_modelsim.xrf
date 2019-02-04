@@ -1,6 +1,7 @@
 vendor_name = ModelSim
 source_file = 1, F:/RHP_backup/RHP/SSR/git/spi_slave/spi_slave.vhd
 source_file = 1, F:/RHP_backup/RHP/SSR/git/spi_slave/Waveform.vwf
+source_file = 1, F:/RHP_backup/RHP/SSR/git/spi_slave/Waveform1.vwf
 source_file = 1, c:/altera/15.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/15.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera/15.0/quartus/libraries/vhdl/ieee/timing_b.vhd

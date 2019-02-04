@@ -2,27 +2,27 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:40:53 on Feb 04,2019
+# Start time: 21:02:30 on Feb 04,2019
 # vlog -work work spi_slave.vo 
 # -- Compiling module spi_slave
 # 
 # Top level modules:
 # 	spi_slave
-# End time: 20:40:53 on Feb 04,2019, Elapsed time: 0:00:00
+# End time: 21:02:30 on Feb 04,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 20:40:53 on Feb 04,2019
-# vlog -work work Waveform.vwf.vt 
+# Start time: 21:02:30 on Feb 04,2019
+# vlog -work work Waveform1.vwf.vt 
 # -- Compiling module spi_slave_vlg_sample_tst
 # -- Compiling module spi_slave_vlg_check_tst
 # -- Compiling module spi_slave_vlg_vec_tst
 # 
 # Top level modules:
 # 	spi_slave_vlg_vec_tst
-# End time: 20:40:53 on Feb 04,2019, Elapsed time: 0:00:00
+# End time: 21:02:30 on Feb 04,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -do "spi_slave.do" 
-# Start time: 20:40:53 on Feb 04,2019
+# Start time: 21:02:30 on Feb 04,2019
 # Loading work.spi_slave_vlg_vec_tst
 # Loading work.spi_slave
 # Loading cycloneive_ver.cycloneive_io_obuf
@@ -33,7 +33,7 @@
 # Loading work.spi_slave_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
 # Simulation passed !
-# ** Note: $finish    : Waveform.vwf.vt(338)
+# ** Note: $finish    : Waveform1.vwf.vt(338)
 #    Time: 1 us  Iteration: 0  Instance: /spi_slave_vlg_vec_tst/tb_out
-# End time: 20:40:54 on Feb 04,2019, Elapsed time: 0:00:01
+# End time: 21:02:30 on Feb 04,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
